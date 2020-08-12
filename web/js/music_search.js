@@ -1,5 +1,5 @@
-// from data.js
-var defData = default_data; 
+
+var defData = data_default; 
 
 var tableData = music_data;
 
@@ -19,14 +19,20 @@ var tbody = d3.select("tbody");
 function populateTable(data){
     // Iterate through each object in the array and call anonymous
     // arrow function
+    // cntr = 20;
+    // i = 0;
     data.forEach((Song) => {
-        var row = tbody.append("tr");
-        // Iterate through each key and value in an object
-        Object.entries(Song).forEach(([key, value]) => {
-            // append data
-            var cell = row.append("td");
-            cell.text(value);
-        });
+        // if (i<cntr){
+            var row = tbody.append("tr");
+            // Iterate through each key and value in an object
+            Object.entries(Song).forEach(([key, value]) => {
+                // append data
+                var cell = row.append("td");
+                cell.text(value);
+            });
+        // }
+        // i++;
+       
     });
 };  
 
