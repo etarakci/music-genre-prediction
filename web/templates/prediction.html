@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Genre Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/music_search_style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Home
+            <!-- <img class="nav-ufo" src="assets/img/background_34926-201.jpg"> -->
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>Music Search</h1>
+      <p>Let's find what you're looking for!</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-3">
+          <aside class="filters">
+            <div class="panel">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter Genre</label>
+                        <input class="form-control" id="genre" type="text" placeholder="acoustic">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="city">Enter Artist Name</label>
+                        <input class="form-control" id="artist_name" type="text" placeholder="Jason Mraz">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="reset-btn" type="reset" class="btn btn-default">Reset Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-9">
+          <div id="table-area" class="">
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Artist</th>
+                  <th class="table-head">Song</th>
+                  <th class="table-head">Genre</th>
+                  <!-- <th class="table-head">Artist Link</th>
+                  <th class="table-head">Song Link</th> -->
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <footer class="footer" style="text-align: center;">
+      <span class="bottom">Genre Prediction</span>
+    </footer> -->
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="../static/js/data1.js"></script>
+  <script src="../static/js/data2.js"></script>
+  <script src="../static/js/music_search.js"></script>
+</body>
+
+</html>
