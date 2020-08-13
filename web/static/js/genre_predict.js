@@ -15,7 +15,5 @@ function handleSubmit() {
     d3.request("/genrepredict")
    .header("X-Requested-With", "XMLHttpRequest")
    .header("Content-Type", "application/x-www-form-urlencoded")
-   .post(inputLyrics);
-
-   console.log(prediction_text)
+   .post(JSON.stringify({"key": inputLyrics}));
 }

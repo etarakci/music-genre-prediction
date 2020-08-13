@@ -2,10 +2,12 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 from helper import clean_text
+import pprint 
+import json
 # import tensorflow as tf
 # import keras
 # from keras.models import load_model
-
+pp = pprint.PrettyPrinter(indent=4)
 
 
 app = Flask(__name__)
@@ -18,19 +20,7 @@ lyric_model = pickle.load(open('static/models/top30_genre_model.sav', 'rb'))
 def index():
     return render_template("index.html")
 
-
-# @app.route("/lyricpredict", methods=['GET','POST'])
-# def predict():
-
-#     int_features = [int(x) for x in request.form.values()]
-#     final_features = [np.array(int_features)]
-#     prediction = lyric_model.predict(final_features)
-
-#     output = round(prediction[0], 2)
-
-#     return render_template('lyric_predict.html', prediction_text='Sales should be $ {}'.format(output))
-
-@app.route("/genrepredict", methods=['GET','POST'])
+@app.route("/genrepredict", methods=['GET'])
 def lyricpredict():
     # figure out how to disect post response
 
@@ -38,12 +28,16 @@ def lyricpredict():
 
 @app.route('/genrepredict', methods=['POST'])
 def lyricpredict_post():
-    text = request.form['text']
+    text = request.form.to_dict()
+    text = [k for k in text.keys()]
+    text = json.loads(text[0])
+    text = text['key']
+
     processed_text = clean_text(text)
     print(processed_text)
     output = lyric_model.predict(processed_text)
 
-    return render_template('lyric_predict.html', prediction_text='Genre:{}'.format(output))
+    return render_template('genre_predict.html', prediction_text='Genre:{}'.format(output))
 
 # @app.route("/audiopredict", methods=['GET','POST'])
 # def audiopredict():
