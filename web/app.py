@@ -35,6 +35,7 @@ def lyricpredict_post():
 
     processed_text = clean_text(text)
     print(processed_text)
+    print(type(processed_text))
     output = lyric_model.predict(processed_text)
 
     return render_template('genre_predict.html', prediction_text='Genre:{}'.format(output))
