@@ -45,7 +45,7 @@ const myQuestions = [
         question: "Do you need some energy?",
         answers: {
           a: "Yes!",
-          b: "Minor",
+          b: "No thanks",
         },
         correctAnswer: "a"
     },
@@ -73,16 +73,29 @@ const myQuestions = [
         },
         correctAnswer: "b"
     },
-
     {
-      question: "Which tool can you use to ensure code quality?",
+        question: "Do you like spoken word in your music?",
+        answers: {
+          a: "Yes!",
+          b: "No thanks",
+        },
+        correctAnswer: "b"
+    }, 
+    {
+        question: "How are you feeling?",
+        answers: {
+          a: "brighter, cheerier, energetic",
+          b: "chill, mellow, gloomy",
+        },
+        correctAnswer: "b"
+    },    
+    {
+      question: "Do you like beats in your music (measured Beats per Minute)?",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: "Yes!",
+        b: "No thanks",
       },
-      correctAnswer: "d"
+      correctAnswer: "b"
     }
   ];
 
