@@ -1,4 +1,3 @@
-
 // Variables for the html
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
@@ -17,83 +16,91 @@ const myQuestions = [
       correctAnswer: "c"
     },
     {
-      question: "Major or minor scale? Major - brighter, cheerier, energetic Minor - chill, mellow, gloomy",
+      question: "Major or minor scale? <br> Major (1) - brighter, cheerier, energetic <br> Minor (2) - chill, mellow, gloomy",
       answers: {
-        a: "Major",
-        b: "Minor",
+        a: 1,
+        b: 0,
       },
       correctAnswer: "a"
     },
     {
-        question: "Where do you prefer to sit when you go to a concert, music hall, performance, etc.?",
+        question: "Where do you prefer to sit when you go to a musical performance, etc.? <br> Front (1) Middle (0.5) Back (0)",
         answers: {
-          a: "Front",
-          b: "Middle",
-          c: "Back"
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "c"
     },
     {
-        question: "Do you feel like dancing?",
+        question: "Do you feel like dancing? <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
-          a: "Yes!",
-          b: "No thanks",
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "b"
     },
     {
-        question: "Do you need some energy?",
+        question: "Do you need some energy? <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
-          a: "Yes!",
-          b: "No thanks",
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "a"
     },
     {
-        question: "Do you like vocals in your music?",
+        question: "Do you like vocals in your music? <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
-          a: "Yes!",
-          b: "No thanks",
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "b"
     },
     {
-        question: "Do you like live music?",
+        question: "Do you like live music? <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
-          a: "Yes!",
-          b: "No thanks",
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "b"
     },
     {
-        question: "Do you like your music loud or how loud do you want your music?",
+        question: "How loud do you like your music? <br> Loud (0) Medium (-30) Low (-60)",
         answers: {
-          a: "Yes!",
-          b: "No thanks",
+          a: 0,
+          b: -30,
+          c: -60
         },
         correctAnswer: "b"
     },
     {
-        question: "Do you like spoken word in your music?",
+        question: "Do you like spoken word in your music? <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
-          a: "Yes!",
-          b: "No thanks",
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "b"
     }, 
     {
-        question: "How are you feeling?",
+        question: "How are you feeling? <br> cheery, energetic (1) chill, mellow (0.5) down, gloomy (0)",
         answers: {
-          a: "brighter, cheerier, energetic",
-          b: "chill, mellow, gloomy",
+          a: 1,
+          b: 0.5,
+          c: 0
         },
         correctAnswer: "b"
     },    
     {
-      question: "Do you like beats in your music (measured Beats per Minute)?",
+      question: "Do you like beats in your music (Beats per Minute)?",
       answers: {
-        a: "Yes!",
-        b: "No thanks",
+        a: 0,
+        b: 100,
+        c: 200
       },
       correctAnswer: "b"
     }
@@ -132,11 +139,18 @@ function buildQuiz(){
         <div class="answers"> ${answers.join("")} </div>
       </div>`
       );
+      
+      console.log(answers);
+      
     }
   );
 
   // finally combine our output list into one string of HTML and put it on the page
   quizContainer.innerHTML = output.join('');
+}
+
+function addScores(){
+  testAnswer
 }
 
 function showResults(){
@@ -168,11 +182,14 @@ function showResults(){
             // color the answers red
             answerContainers[questionNumber].style.color = 'red';
           }
+          
         });
-      
         // show number of correct answers out of total
         resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+
 }
+
+
 
 function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
@@ -194,11 +211,13 @@ function showSlide(n) {
     }
   }
 
-  function showNextSlide() {
+  function showNextSlide(e) {
+e.preventDefault()
     showSlide(currentSlide + 1);
   }
   
-  function showPreviousSlide() {
+  function showPreviousSlide(e) {
+    e.preventDefault()
     showSlide(currentSlide - 1);
   }
 
