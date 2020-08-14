@@ -17,6 +17,7 @@ app = Flask(__name__)
 lyric_model = pickle.load(open('static/models/top30_genre_model.pickle', 'rb'))
 loaded_tfidf= pickle.load(open("static/models/vectorizer.pickle", "rb"))
 genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
+audio_features_model = pickle.load(open("static/models/audio_features_model.csv", "rb"))
 
 # sound_model = load_model('static/models/audio_features_model.h5')
 
@@ -42,11 +43,14 @@ def genrepredict():
     return render_template('genre_predict.html')
 
 
-# @app.route("/audiopredict", methods=['GET','POST'])
-# def audiopredict():
-#     # figure out how to disect post response
+@app.route("/audiopredict", methods=['GET','POST'])
+def audiopredict():
+    if request.method=='POST':
+        array = request.form.get("inputArray")
 
-#     return render_template('audio_predict.html')
+        genre_prediction = audio_features_model(array)
+
+    return render_template('quiz_predict.html')
 
 
 if __name__ == "__main__":
