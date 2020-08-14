@@ -33,16 +33,16 @@ def summary():
 def musicsearch():
     return render_template("music_search.html")
 
-@app.route("/prediction", methods=['GET','POST'])
-def prediction():
-    return render_template("prediction.html")
+# @app.route("/prediction", methods=['GET','POST'])
+# def prediction():
+#     return render_template("prediction.html")
 
 # @app.route("/quiz", methods=['GET','POST'])
 # def quiz():
 #     return render_template("predict.html")
 
 
-@app.route("/genrepredict", methods=['GET','POST'])
+@app.route("/prediction", methods=['GET','POST'])
 def genrepredict():
     # figure out how to disect post response
     if request.method=='POST':
@@ -54,9 +54,9 @@ def genrepredict():
         prediction = lyric_model.predict(X_test)
         prediction_text = genre_dict[prediction[0]]
         print(prediction_text)
-        return render_template('genre_predict.html', predictiontext=prediction_text, hi="Hi")
+        return render_template('prediction.html', predictiontext=prediction_text, hi="Hi")
 
-    return render_template('genre_predict.html')
+    return render_template('prediction.html')
 
 
 @app.route("/audiopredict", methods=['GET','POST'])

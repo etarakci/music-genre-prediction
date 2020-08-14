@@ -14,18 +14,53 @@
 <body>
   <div class="wrapper">
         <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            <a class="navbar-brand" href="/">Home
-                <!-- <img class="nav-ufo" src="assets/img/background_34926-201.jpg"> -->
-            </a>
-            </div>
-        </div>
+          <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home
+                    <!-- <img class="nav-ufo" src="assets/img/background_34926-201.jpg"> -->
+                </a>
+              </div>
+          </div>
         </nav>
         <div class="hero text-center">
-        <h1>Genre Prediction</h1>
-        <p>Let's predict a genre!</p>
+          <h1>Genre Prediction</h1>
+          <p>Let's predict a genre!</p>
+        </div>
+
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center" >
+              <h1 style="color:black"> Enter Lyrics to Predict Genre:</h1>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <form action="/prediction" method="POST">
+                <!-- <input name="lyric" id="lyric-input" style="height:200px;width:30%;font-size:12pt;">  -->
+                <div>
+                  <textarea name="lyric" id="lyric-input" cols="60" rows="10"></textarea>
+                </div>
+                <div>
+                  <button type="submit" id="lyric-submit" style="color:black">Predict Genre</button>
+                </div>
+              </form>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <div id="prediction">
+                <h1 style="color:black">Prediction: {{ predictiontext }} </h1>
+              </div>
+            </div>
+          </div>
+          
+      
+          
         </div>
     </div>
+
+    
+
+
 </body>
 </html>
