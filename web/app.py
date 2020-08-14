@@ -2,6 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 from helper import clean_text
+from helper import transform_data
 import pprint 
 import json
 # import tensorflow as tf
@@ -12,7 +13,10 @@ pp = pprint.PrettyPrinter(indent=4)
 
 app = Flask(__name__)
 
-lyric_model = pickle.load(open('static/models/top30_genre_model.sav', 'rb'))
+lyric_model = pickle.load(open('static/models/top30_genre_model.pickle', 'rb'))
+loaded_tfidf= pickle.load(open("static/models/vectorizer.pickle", "rb"))
+genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
+
 # sound_model = load_model('static/models/audio_features_model.h5')
 
 
@@ -34,11 +38,13 @@ def lyricpredict_post():
     text = text['key']
 
     processed_text = clean_text(text)
-    print(processed_text)
-    print(type(processed_text))
-    output = lyric_model.predict(processed_text)
+    X_test = loaded_tfidf.transform([processed_text])
 
-    return render_template('genre_predict.html', prediction_text='Genre:{}'.format(output))
+    prediction = lyric_model.predict(X_test)
+    output = genre_dict[prediction[0]]
+
+    print(output)
+    return render_template('genre_predict.html', prediction_text=output)
 
 # @app.route("/audiopredict", methods=['GET','POST'])
 # def audiopredict():

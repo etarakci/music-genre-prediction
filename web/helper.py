@@ -28,3 +28,19 @@ def clean_text(text):
     text = text.translate(translate_map)
 
     return text
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+import pandas as pd
+
+def transform_data(string):
+    d = {'lyrics': [string]}
+    input_df = pd.DataFrame(data=d)
+
+    tfidf = TfidfVectorizer(sublinear_tf=True, min_df=1, norm='l2', encoding='latin-1', ngram_range=(1, 2), stop_words='english')
+    features = tfidf.fit_transform(input_df.lyrics).toarray()
+
+    return features
+
+
+
+
