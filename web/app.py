@@ -30,9 +30,6 @@ def genrepredict():
     # figure out how to disect post response
     if request.method=='POST':
         text = request.form.get("lyric")
-        # text = [k for k in text.keys()]
-        # text = json.loads(text[0])
-        # text = text['key']
 
         processed_text = clean_text(text)
         X_test = loaded_tfidf.transform([processed_text])
@@ -44,22 +41,6 @@ def genrepredict():
 
     return render_template('genre_predict.html')
 
-# @app.route('/genrepredict', methods=['POST'])
-# def genrepredict_post():
-#     text = request.form.to_dict()
-#     text = [k for k in text.keys()]
-#     text = json.loads(text[0])
-#     text = text['key']
-
-#     processed_text = clean_text(text)
-#     X_test = loaded_tfidf.transform([processed_text])
-
-#     prediction = lyric_model.predict(X_test)
-#     prediction_text = genre_dict[prediction[0]]
-
-#     print(prediction_text)
-#     return redirect(url_for('genrepredict',prediction_text = prediction_text))
-#     # return render_template('genre_predict.html', prediction_text=prediction_text)
 
 # @app.route("/audiopredict", methods=['GET','POST'])
 # def audiopredict():
