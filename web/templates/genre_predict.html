@@ -26,10 +26,15 @@
       <p>Let's find what you're looking for!</p>
     </div>
 
-    <form method="POST" >
+    <form action="/genrepredict" method="POST">
         <input name="lyric" id="lyric-input">
-        <button type="button" id="lyric-submit">Submit</button>
+        <button type="submit" id="lyric-submit">Submit</button>
     </form>
+
+    <div id="prediction">
+      <h1>Prediction:{{ predictiontext }} {{ hi }}</h1>
+    </div>
+
     
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>

@@ -1,10 +1,11 @@
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 import pickle
 from helper import clean_text
 from helper import transform_data
 import pprint 
 import json
+
 # import tensorflow as tf
 # import keras
 # from keras.models import load_model
@@ -24,27 +25,41 @@ genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
 def index():
     return render_template("index.html")
 
-@app.route("/genrepredict", methods=['GET'])
-def lyricpredict():
+@app.route("/genrepredict", methods=['GET','POST'])
+def genrepredict():
     # figure out how to disect post response
+    if request.method=='POST':
+        text = request.form.get("lyric")
+        # text = [k for k in text.keys()]
+        # text = json.loads(text[0])
+        # text = text['key']
+
+        processed_text = clean_text(text)
+        X_test = loaded_tfidf.transform([processed_text])
+
+        prediction = lyric_model.predict(X_test)
+        prediction_text = genre_dict[prediction[0]]
+        print(prediction_text)
+        return render_template('genre_predict.html', predictiontext=prediction_text, hi="Hi")
 
     return render_template('genre_predict.html')
 
-@app.route('/genrepredict', methods=['POST'])
-def lyricpredict_post():
-    text = request.form.to_dict()
-    text = [k for k in text.keys()]
-    text = json.loads(text[0])
-    text = text['key']
+# @app.route('/genrepredict', methods=['POST'])
+# def genrepredict_post():
+#     text = request.form.to_dict()
+#     text = [k for k in text.keys()]
+#     text = json.loads(text[0])
+#     text = text['key']
 
-    processed_text = clean_text(text)
-    X_test = loaded_tfidf.transform([processed_text])
+#     processed_text = clean_text(text)
+#     X_test = loaded_tfidf.transform([processed_text])
 
-    prediction = lyric_model.predict(X_test)
-    output = genre_dict[prediction[0]]
+#     prediction = lyric_model.predict(X_test)
+#     prediction_text = genre_dict[prediction[0]]
 
-    print(output)
-    return render_template('genre_predict.html', prediction_text=output)
+#     print(prediction_text)
+#     return redirect(url_for('genrepredict',prediction_text = prediction_text))
+#     # return render_template('genre_predict.html', prediction_text=prediction_text)
 
 # @app.route("/audiopredict", methods=['GET','POST'])
 # def audiopredict():

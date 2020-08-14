@@ -33,13 +33,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 
 def transform_data(string):
-    d = {'lyrics': [string]}
-    input_df = pd.DataFrame(data=d)
+    user_lyric = clean_text(string)
 
-    tfidf = TfidfVectorizer(sublinear_tf=True, min_df=1, norm='l2', encoding='latin-1', ngram_range=(1, 2), stop_words='english')
-    features = tfidf.fit_transform(input_df.lyrics).toarray()
+    
 
-    return features
+    return X_test
 
 
 
