@@ -1,0 +1,361 @@
+<!-- SUMMARY PAGE -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Summary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <!-- Third party plugin CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/summary_style.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="templates/index.html">Home
+                <!-- <img class="nav-ufo" src="assets/img/background_34926-201.jpg"> -->
+            </a>
+            </div>
+        </div>
+        </nav>
+        <div class="hero text-center">
+            <h1>Summary</h1>
+            <!-- <p>Let's find what you're looking for!</p> -->
+        </div> -->
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1> <strong class="be">Predicting Song Genre Using Machine Learning Methods</strong></h1>
+            <h2 class = "qa">Can lyrics and sound features predict song genre?</h2>
+        </div>
+
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p>
+                    Our team was curious about the relationship between song genre, song lyrics, and sound features.
+                    We aimed to use various machine learning models to predict song genre using lyrics and sound data.
+                    Below are some detailed explanations of the machine learning methods involved and our findings. 
+                </p>
+			</div>
+		<!-- </div> -->
+    </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>The Data</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p>
+                   The datasets used for this project were obtained from 
+                   <a href="http://www.spotify.com" class="co ie kr ks kt ku" target="_blank" rel="noopener nofollow">www.spotify.com</a>
+                     and 
+                    <a href="http://www.azlyrics.com" class="co ie kr ks kt ku" target="_blank" rel="noopener nofollow">www.azlyrics.com</a>
+                    . The initial dataset gathered from spotify api contains 114,832 songs from 3,132 artists and 111 song genres 
+                    while the azlyrics dataset contains 147,872 songs from 6,464 artists and 111 song genres.These datasets include songs in different languages. 
+                    After the cleaning process, the datasets from both sources were reduced to top 7 genres and only include songs in English.  
+                </p>
+                <!-- <h2>Spotify</h2>
+                <p>
+                    The limitations of the original dataset a
+                </p>
+                <h2>AZLyrics</h2> -->
+			</div>
+		<!-- </div> -->
+    </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>Data Cleaning</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p>
+                    There were variety of issues with the gathered datasets considered before the cleaning process in order to determine
+                    which features and values need to be extracted or removed. Some of the limitations of our datasets are expalained below.
+                
+                </p>
+                <h2>Spotify</h2>
+                <p>
+                    The limitations of the original dataset gathered from spotify includes: 
+                </p>
+                <ul>
+                    <li>Feed cat</li>
+                    <li>Wash car</li>
+                    <li>Grocery shopping</li>
+                </ul>
+                <p>
+                    The data cleaning process for the spotify dataset includes: 
+                </p>
+                <ul>
+                    <li>Genre Selection - Spotify API Request</li>
+                    <img src="visualizations/spotify_dc1.PNG" alt="">
+                    <li>Track Information - Spotify API Request</li>
+                    <img src="visualizations/spotify_dc2.PNG" alt="">
+                    <li>Audio Features - Spotify API Request</li>
+                    <img src="visualizations/spotify_dc3.PNG" alt="">
+                </ul>
+                <h2>AZLyrics</h2>
+                <p>
+                    The limitations of the original dataset gathered from AZLyrics includes: 
+                </p>
+                <ul>
+                    <li>Feed cat</li>
+                    <li>Wash car</li>
+                    <li>Grocery shopping</li>
+                </ul>
+                <p>
+                    The data cleaning process for the AZLyrics dataset includes: 
+                </p>
+                <ul>
+                    <li>Feed cat</li>
+                    <li>Wash car</li>
+                    <li>Grocery shopping</li>
+                </ul>
+                
+                
+			</div>
+		<!-- </div> -->
+    </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>Visualizations</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p>
+                   Paragraph 1  
+                </p>
+			</div>
+		<!-- </div> -->
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+          <div id="portfolio">
+              <div class="container p-0">
+                  <div class="row no-gutters">
+                      <div class="col-lg-4 col-sm-6">
+                          <a class="portfolio-box" href="visualizations/pop_wc.png">
+                              <img class="img-responsive " src="visualizations/pop_wc.png" alt="">
+                              <div class="portfolio-box-caption">
+                                  <!-- <div class="project-category text-white-50">Category</div> -->
+                                  <div class="project-name">Pop</div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="col-lg-4 col-sm-6">
+                          <a class="portfolio-box" href="visualizations/rock_wc.png">
+                              <img class="img-responsive " src="visualizations/rock_wc.png" alt="">
+                              <div class="portfolio-box-caption">
+                                  <!-- <div class="project-category text-white-50">Category</div> -->
+                                  <div class="project-name">Rock</div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="col-lg-4 col-sm-6">
+                          <a class="portfolio-box" href="visualizations/classical_wc.png">
+                              <img class="img-responsive " src="visualizations/classical_wc.png" alt="">
+                              <div class="portfolio-box-caption">
+                                  <!-- <div class="project-category text-white-50">Category</div> -->
+                                  <div class="project-name">Classical</div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="col-lg-4 col-sm-6">
+                          <a class="portfolio-box" href="visualizations/jazz_wc.png">
+                              <img class="img-responsive " src="visualizations/jazz_wc.png" alt="">
+                              <div class="portfolio-box-caption">
+                                  <!-- <div class="project-category text-white-50">Category</div> -->
+                                  <div class="project-name">Jazz</div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="col-lg-4 col-sm-6">
+                          <a class="portfolio-box" href="visualizations/country_wc.png">
+                              <img class="img-responsive" src="visualizations/country_wc.png" alt="">
+                              <div class="portfolio-box-caption">
+                                  <!-- <div class="project-category text-white-50">Category</div> -->
+                                  <div class="project-name">Country</div>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="col-lg-4 col-sm-6">
+                          <a class="portfolio-box" href="visualizations/folk_wc.png">
+                              <img class="img-responsive" src="visualizations/folk_wc.png" alt="">
+                              <div class="portfolio-box-caption p-3">
+                                  <!-- <div class="project-category text-white-50">Category</div> -->
+                                  <div class="project-name">Folk</div>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>The Models</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p>
+                   Paragraph 1  
+                </p>
+            </div>
+            <h2>Spotify</h2>
+            <ul>
+                <li>Audio Features - Neural Network Deep Learning - Accuracy - 0.26</li>
+                <img src="visualizations/spotify_dc4.PNG" alt="">
+                <img src="visualizations/spotify_dc5.PNG" alt="">
+                <li>Audio Features - Neural Network Deep Learning - Accuracy 0.57</li>
+                <img src="visualizations/spotify_dc6.PNG" alt="">
+                <img src="visualizations/spotify_dc7.PNG" alt="">
+                <li>Audio Features - KNN Model - Accuracy 0.55</li>
+                <img src="visualizations/spotify_dc8.PNG" alt="">
+                <img src="visualizations/spotify_dc9.PNG" alt="">
+            </ul>
+            <h2>AZLyrics</h2>
+            <ul>
+                <li>Feed cat</li>
+                <li>Wash car</li>
+                <li>Grocery shopping</li>
+            </ul>
+		<!-- </div> -->
+    </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>Results and Findings</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p class="main">
+                   Paragraph 1  
+                </p>
+            </div>
+            <h2>Spotify</h2>
+            <h2>AZLyrics</h2>
+		<!-- </div> -->
+    </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>Future Improvements</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<div class="col-12">
+				<p>
+                   Paragraph 1  
+                </p>
+			</div>
+		<!-- </div> -->
+    </div>
+    <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>References</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+			<!-- <div class="col-12">
+				<p>
+                   Paragraph 1  
+                </p>
+            </div> -->
+            <ul class="references">
+                <li><a href="https://www.spotify.com">Spotify</li>
+                <li><a href="https://www.azlyrics.com">AZLyrics</li>
+                <li><a href="https://www.kaggle.com">Kaggle</li>
+                <li><a href="https://pdfs.semanticscholar.org/c7f9/f7709dd30d07602c85608b1392db9ddc725a.pdf">Stanford</li>
+            </ul>
+		<!-- </div> -->
+    </div>
+    <!-- <div class = "dots"">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <!-- <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span> -->
+   <!--</div> -->
+   <footer class="bg-light py-5">
+    <div class="container"><div class="small text-center text-muted">Copyright © 2020</div></div>
+    </footer>
+    
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/script.js"></script>
+</body>
+</html>
