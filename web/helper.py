@@ -32,12 +32,6 @@ def clean_text(text):
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
 
-def transform_data(string):
-    user_lyric = clean_text(string)
-
-    
-
-    return X_test
 
 # def transform_audio_data(array):
 #     user_input = clean

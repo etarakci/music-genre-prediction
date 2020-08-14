@@ -2,7 +2,6 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 import pickle
 from helper import clean_text
-from helper import transform_data
 import pprint 
 import json
 
