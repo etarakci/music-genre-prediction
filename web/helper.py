@@ -39,6 +39,7 @@ def transform_data(string):
 
     return X_test
 
-
+# def transform_audio_data(array):
+#     user_input = clean
 
 
