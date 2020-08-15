@@ -12,15 +12,15 @@ pp = pprint.PrettyPrinter(indent=4)
 
 app = Flask(__name__)
 
-# lyric_model = pickle.load(open('final_web/static/models/top30_genre_model.pickle', 'rb'))
-# loaded_tfidf= pickle.load(open("final_web/static/models/vectorizer.pickle", "rb"))
-# genre_dict = pickle.load(open("final_web/static/models/genre_dict.csv", "rb"))
-# audio_features_model = pickle.load(open("final_web/static/models/audio_features_model.csv", "rb"))
+lyric_model = pickle.load(open('final_web/static/models/top30_genre_model.pickle', 'rb'))
+loaded_tfidf= pickle.load(open("final_web/static/models/vectorizer.pickle", "rb"))
+genre_dict = pickle.load(open("final_web/static/models/genre_dict.csv", "rb"))
+audio_features_model = pickle.load(open("final_web/static/models/audio_features_model.csv", "rb"))
 
-lyric_model = pickle.load(open('static/models/top30_genre_model.pickle', 'rb'))
-loaded_tfidf= pickle.load(open("static/models/vectorizer.pickle", "rb"))
-genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
-audio_features_model = pickle.load(open("static/models/audio_features_model.csv", "rb"))
+# lyric_model = pickle.load(open('static/models/top30_genre_model.pickle', 'rb'))
+# loaded_tfidf= pickle.load(open("static/models/vectorizer.pickle", "rb"))
+# genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
+# audio_features_model = pickle.load(open("static/models/audio_features_model.csv", "rb"))
 
 import re
 
