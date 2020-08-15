@@ -1,7 +1,6 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 import pickle
-from helper import clean_text
 import pprint 
 import json
 
@@ -19,6 +18,36 @@ genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
 audio_features_model = pickle.load(open("static/models/audio_features_model.csv", "rb"))
 
 # sound_model = load_model('static/models/audio_features_model.h5')
+import re
+
+def clean_text(text):
+    """
+    Applies some pre-processing on the given text.
+
+    Steps :
+    - Removing HTML tags
+    - Removing punctuation
+    - Lowering text
+    """
+    
+    # remove HTML tags
+    text = re.sub(r'<.*?>', '', text)
+    
+    # remove the characters [\], ['] and ["]
+    text = re.sub(r"\\", "", text)    
+    text = re.sub(r"\'", "", text)    
+    text = re.sub(r"\"", "", text)    
+    
+    # convert text to lowercase
+    text = text.strip().lower()
+    
+    # replace punctuation characters with spaces
+    filters='!"\'#$%&()*+,-./:;<=>?@[\\]^_`{|}~\t\n'
+    translate_dict = dict((c, " ") for c in filters)
+    translate_map = str.maketrans(translate_dict)
+    text = text.translate(translate_map)
+
+    return text
 
 
 @app.route("/", methods=['GET','POST'])
