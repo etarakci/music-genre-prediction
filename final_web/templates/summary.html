@@ -102,33 +102,17 @@
                 </p>
                 <h2>Spotify</h2>
                 <p>
-                    The limitations of the original dataset gathered from spotify includes: 
-                </p>
-                <ul>
-                    <li>Feed cat</li>
-                    <li>Wash car</li>
-                    <li>Grocery shopping</li>
-                </ul>
-                <p>
                     The data cleaning process for the spotify dataset includes: 
                 </p>
                 <ul>
                     <li>Genre Selection - Spotify API Request</li>
-                    <img src="visualizations/spotify_dc1.PNG" alt="">
+                    <img src="../static/visualizations/spotify_dc1.PNG" alt="" style="width:40%;display:block;"> 
                     <li>Track Information - Spotify API Request</li>
-                    <img src="visualizations/spotify_dc2.PNG" alt="">
+                    <img src="../static/visualizations/spotify_dc2.PNG" alt="" style="width:40%;display:block;">
                     <li>Audio Features - Spotify API Request</li>
-                    <img src="visualizations/spotify_dc3.PNG" alt="">
+                    <img src="../static/visualizations/spotify_dc3.PNG" alt="" style="width:40%;display:block;">
                 </ul>
                 <h2>AZLyrics</h2>
-                <p>
-                    The limitations of the original dataset gathered from AZLyrics includes: 
-                </p>
-                <ul>
-                    <li>Need to be merged with Spotify dataset to obtain genres.</li>
-                    <li>Large amount of categories (92). </li>
-                    <li>Inconsistent labelling.</li>
-                </ul>
                 <p>
                     The data cleaning process for the AZLyrics dataset includes: 
                 </p>
@@ -151,6 +135,48 @@
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
+    
+    <div class = "row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
+            <h1>The Models</h1>
+        </div>
+    </div>
+    <div class="container-fluid padding">
+		<!-- <div class="row padding"> -->
+            <h2>Spotify</h2>
+            <ul>
+                <li>Audio Features - Neural Network Deep Learning - Accuracy - 0.26</li>
+                <img src="../static/visualizations/spotify_dc4.PNG" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/spotify_dc5.PNG" alt="" style="width:40%;display:block;">
+                <li>Audio Features - Neural Network Deep Learning - Accuracy 0.57</li>
+                <img src="../static/visualizations/spotify_dc6.PNG" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/spotify_dc7.PNG" alt="" style="width:40%;display:block;">
+                <li>Audio Features - KNN Model - Accuracy 0.55</li>
+                <img src="../static/visualizations/spotify_dc8.PNG" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/spotify_dc9.PNG" alt="" style="width:40%;display:block;">
+            </ul>
+            <h2>AZLyrics</h2>
+            <ul>
+                <li>Data Not Normalized - Take Top 30 Most Popular Genres to Improve Accuracy</li>
+                <img src="../static/visualizations/lyric_genre_normalization_graph.png" alt="" style="width:40%;display:block;">
+                <li>Multiple Models Tested for Natural Language Processing</li>
+                <img src="../static/visualizations/lyrics_ml_comparison_graph.png" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/model_accuracy_comparison.png" alt="" style="width:40%;display:block;">
+                <li>Lyrics - LinearSVC for Natural Language Processing - Accuracy 0.34</li>
+                <img src="../static/visualizations/ml_accuracy.png" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/lyrics_ml_confusion_matrix.png" alt="" style="width:40%;display:block;">
+
+            </ul>
+		<!-- </div> -->
+    </div>
+    <div class = "dots">
+        <!-- <h1>Round Dots / Circles</h1> -->
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
     <div class = "row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
             <h1>Visualizations</h1>
@@ -231,51 +257,6 @@
         </div>
       </div>
     <div class = "dots"">
-        <!-- <h1>Round Dots / Circles</h1> -->
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
-    <div class = "row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
-            <h1>The Models</h1>
-        </div>
-    </div>
-    <div class="container-fluid padding">
-		<!-- <div class="row padding"> -->
-			<div class="col-12">
-				<p>
-                   Paragraph 1  
-                </p>
-            </div>
-            <h2>Spotify</h2>
-            <ul>
-                <li>Audio Features - Neural Network Deep Learning - Accuracy - 0.26</li>
-                <img src="../static/visualizations/spotify_dc4.PNG" alt="" style="width:40%;display:block;">
-                <img src="../static/visualizations/spotify_dc5.PNG" alt="" style="width:40%;display:block;">
-                <li>Audio Features - Neural Network Deep Learning - Accuracy 0.57</li>
-                <img src="../static/visualizations/spotify_dc6.PNG" alt="" style="width:40%;display:block;">
-                <img src="../static/visualizations/spotify_dc7.PNG" alt="" style="width:40%;display:block;">
-                <li>Audio Features - KNN Model - Accuracy 0.55</li>
-                <img src="../static/visualizations/spotify_dc8.PNG" alt="" style="width:40%;display:block;">
-                <img src="../static/visualizations/spotify_dc9.PNG" alt="" style="width:40%;display:block;">
-            </ul>
-            <h2>AZLyrics</h2>
-            <ul>
-                <li>Data Not Normalized - Take Top 30 Most Popular Genres to Improve Accuracy</li>
-                <img src="../static/visualizations/lyric_genre_normalization_graph.png" alt="" style="width:40%;display:block;">
-                <li>Multiple Models Tested for Natural Language Processing</li>
-                <img src="../static/visualizations/lyrics_ml_comparison_graph.png" alt="" style="width:40%;display:block;">
-                <img src="../static/visualizations/model_accuracy_comparison.png" alt="" style="width:40%;display:block;">
-                <li>Lyrics - LinearSVC for Natural Language Processing - Accuracy 0.34</li>
-                <img src="../static/visualizations/ml_accuracy.png" alt="" style="width:40%;display:block;">
-                <img src="../static/visualizations/lyrics_ml_confusion_matrix.png" alt="" style="width:40%;display:block;">
-
-            </ul>
-		<!-- </div> -->
-    </div>
-    <div class = "dots">
         <!-- <h1>Round Dots / Circles</h1> -->
         <span class="dot"></span>
         <span class="dot"></span>
