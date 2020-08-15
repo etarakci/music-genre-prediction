@@ -17,11 +17,14 @@
           <div class="container-fluid">
               <div class="navbar-header">
                 <a class="navbar-brand" href="/">Home
-                    <!-- <img class="nav-ufo" src="assets/img/background_34926-201.jpg"> -->
                 </a>
               </div>
           </div>
         </nav>
+
+
+
+        
         <div class="hero text-center">
           <h1>Genre Prediction</h1>
           <p>Let's predict a genre!</p>
@@ -31,30 +34,50 @@
 
           <div class="row">
             <div class="col-12 d-flex justify-content-center" >
-              <h1 style="color:black"> Enter Lyrics to Predict Genre:</h1>
+              <h1 style="color:black"> Enter Lyrics to Predict Genre</h1>
             </div>
-            <div class="col-12 d-flex justify-content-center">
-              <form action="/prediction" method="POST">
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-3"></div>
+
+
+            <div class="col-lg-6 d-flex justify-content-center text-center">
+              <form class="d-flex justify-content-center" action="/prediction" method="POST">
                 <!-- <input name="lyric" id="lyric-input" style="height:200px;width:30%;font-size:12pt;">  -->
                 <div>
                   <textarea name="lyric" id="lyric-input" cols="60" rows="10"></textarea>
                 </div>
                 <div>
-                  <button type="submit" id="lyric-submit" style="color:black">Predict Genre</button>
+                  <button class="d-flex justify-content-center"type="submit" id="lyric-submit" style="color:black" >Predict Genre</button>
                 </div>
               </form>
             </div>
+
+            <div class="col-lg-3"></div>
           </div>
+
+            
+         
     
           <div class="row">
-            <div class="col-12 d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center text-center">
               <div id="prediction">
-                <h1 style="color:black">Prediction: {{ predictiontext }} </h1>
+                <h3 style="color:black">Prediction:</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center text-center">
+              <div id="prediction">
+                <h1 style="color:black">{{ predictiontext }} </h1>
               </div>
             </div>
           </div>
           
-      
+          
           
         </div>
     </div>

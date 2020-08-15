@@ -1,15 +1,3 @@
-// var inputArray = [];
-// var size = 12; //Maximum Array size
-
-// for(var i=0; i<size; i++) {
-	
-	//Taking Input from user
-  // inputArray[i] = prompt('What is your preferred duration for music? ' + (i+1));
-
-// }
-
-//Print the array in the console.
-// console.log(inputArray);
 
 
 // Variables for the html
@@ -30,7 +18,7 @@ const myQuestions = [
       correctAnswer: "c"
     },
     {
-      question: "Major or minor scale? <br> Major (1) - brighter, cheerier, energetic <br> Minor (2) - chill, mellow, gloomy",
+      question: "What's your musical pitch preference? <br> Major (1) - brighter, cheerier, energetic <br> Minor (2) - chill, mellow, gloomy",
       answers: {
         a: 1,
         b: 0,
@@ -83,7 +71,7 @@ const myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "How loud do you like your music? <br> Loud (0) Medium (-30) Low (-60)",
+        question: "How loud do you like your music? <br> Measured: Decibals(dB) ",
         answers: {
           a: 0,
           b: -30,
@@ -101,7 +89,7 @@ const myQuestions = [
         correctAnswer: "b"
     }, 
     {
-        question: "How are you feeling? <br> cheery, energetic (1) chill, mellow (0.5) down, gloomy (0)",
+        question: "How are you feeling? <br> Cheery, Energetic (1) Chill, Mellow (0.5) Down, Gloomy (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -110,7 +98,7 @@ const myQuestions = [
         correctAnswer: "b"
     },    
     {
-      question: "Do you like beats in your music (Beats per Minute)?",
+      question: "Do you like beats in your music? <br> Measuredx: beats per minute",
       answers: {
         a: 0,
         b: 100,

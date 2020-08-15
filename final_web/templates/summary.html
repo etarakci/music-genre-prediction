@@ -125,24 +125,26 @@
                     The limitations of the original dataset gathered from AZLyrics includes: 
                 </p>
                 <ul>
-                    <li>Feed cat</li>
-                    <li>Wash car</li>
-                    <li>Grocery shopping</li>
+                    <li>Need to be merged with Spotify dataset to obtain genres.</li>
+                    <li>Large amount of categories (92). </li>
+                    <li>Inconsistent labelling.</li>
                 </ul>
                 <p>
                     The data cleaning process for the AZLyrics dataset includes: 
                 </p>
                 <ul>
-                    <li>Feed cat</li>
-                    <li>Wash car</li>
-                    <li>Grocery shopping</li>
+                    <li>Drop duplicates and NA values.</li>
+                    <li>Standardize artist names to match names from Spotify dataset.</li>
+                    <li>Remove songs with invalid and non-english lyrics.</li>
+                    <li>Merge lyric dataset with Spotify dataset on artist and song name to obtain genre.</li>
+                    <li>After the merge, only about 7,000 songs remain with 90 genres.</li>
                 </ul>
                 
                 
 			</div>
 		<!-- </div> -->
     </div>
-    <div class = "dots"">
+    <div class = "dots">
         <!-- <h1>Round Dots / Circles</h1> -->
         <span class="dot"></span>
         <span class="dot"></span>
@@ -158,7 +160,7 @@
 		<!-- <div class="row padding"> -->
 			<div class="col-12">
 				<p>
-                   Paragraph 1  
+                   The following are word bubbles created from the most common words in lyrics grouped by genre.
                 </p>
 			</div>
 		<!-- </div> -->
@@ -170,8 +172,8 @@
               <div class="container p-0">
                   <div class="row no-gutters">
                       <div class="col-lg-4 col-sm-6">
-                          <a class="portfolio-box" href="visualizations/pop_wc.png">
-                              <img class="img-responsive " src="visualizations/pop_wc.png" alt="">
+                          <a class="portfolio-box" href="../static/visualizations/pop_wc.png">
+                              <img class="img-responsive " src="../static/visualizations/pop_wc.png" alt="">
                               <div class="portfolio-box-caption">
                                   <!-- <div class="project-category text-white-50">Category</div> -->
                                   <div class="project-name">Pop</div>
@@ -179,8 +181,8 @@
                           </a>
                       </div>
                       <div class="col-lg-4 col-sm-6">
-                          <a class="portfolio-box" href="visualizations/rock_wc.png">
-                              <img class="img-responsive " src="visualizations/rock_wc.png" alt="">
+                          <a class="portfolio-box" href="../static/visualizations/rock_wc.png">
+                              <img class="img-responsive " src="../static/visualizations/rock_wc.png" alt="">
                               <div class="portfolio-box-caption">
                                   <!-- <div class="project-category text-white-50">Category</div> -->
                                   <div class="project-name">Rock</div>
@@ -188,8 +190,8 @@
                           </a>
                       </div>
                       <div class="col-lg-4 col-sm-6">
-                          <a class="portfolio-box" href="visualizations/classical_wc.png">
-                              <img class="img-responsive " src="visualizations/classical_wc.png" alt="">
+                          <a class="portfolio-box" href="../static/visualizations/classical_wc.png">
+                              <img class="img-responsive " src="../static/visualizations/classical_wc.png" alt="">
                               <div class="portfolio-box-caption">
                                   <!-- <div class="project-category text-white-50">Category</div> -->
                                   <div class="project-name">Classical</div>
@@ -197,8 +199,8 @@
                           </a>
                       </div>
                       <div class="col-lg-4 col-sm-6">
-                          <a class="portfolio-box" href="visualizations/jazz_wc.png">
-                              <img class="img-responsive " src="visualizations/jazz_wc.png" alt="">
+                          <a class="portfolio-box" href="../static/visualizations/jazz_wc.png">
+                              <img class="img-responsive " src="../static/visualizations/jazz_wc.png" alt="">
                               <div class="portfolio-box-caption">
                                   <!-- <div class="project-category text-white-50">Category</div> -->
                                   <div class="project-name">Jazz</div>
@@ -206,8 +208,8 @@
                           </a>
                       </div>
                       <div class="col-lg-4 col-sm-6">
-                          <a class="portfolio-box" href="visualizations/country_wc.png">
-                              <img class="img-responsive" src="visualizations/country_wc.png" alt="">
+                          <a class="portfolio-box" href="../static/visualizations/country_wc.png">
+                              <img class="img-responsive" src="../static/visualizations/country_wc.png" alt="">
                               <div class="portfolio-box-caption">
                                   <!-- <div class="project-category text-white-50">Category</div> -->
                                   <div class="project-name">Country</div>
@@ -215,8 +217,8 @@
                           </a>
                       </div>
                       <div class="col-lg-4 col-sm-6">
-                          <a class="portfolio-box" href="visualizations/folk_wc.png">
-                              <img class="img-responsive" src="visualizations/folk_wc.png" alt="">
+                          <a class="portfolio-box" href="../static/visualizations/folk_wc.png">
+                              <img class="img-responsive" src="../static/visualizations/folk_wc.png" alt="">
                               <div class="portfolio-box-caption p-3">
                                   <!-- <div class="project-category text-white-50">Category</div> -->
                                   <div class="project-name">Folk</div>
@@ -250,53 +252,37 @@
             <h2>Spotify</h2>
             <ul>
                 <li>Audio Features - Neural Network Deep Learning - Accuracy - 0.26</li>
-                <img src="visualizations/spotify_dc4.PNG" alt="">
-                <img src="visualizations/spotify_dc5.PNG" alt="">
+                <img src="../static/visualizations/spotify_dc4.PNG" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/spotify_dc5.PNG" alt="" style="width:40%;display:block;">
                 <li>Audio Features - Neural Network Deep Learning - Accuracy 0.57</li>
-                <img src="visualizations/spotify_dc6.PNG" alt="">
-                <img src="visualizations/spotify_dc7.PNG" alt="">
+                <img src="../static/visualizations/spotify_dc6.PNG" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/spotify_dc7.PNG" alt="" style="width:40%;display:block;">
                 <li>Audio Features - KNN Model - Accuracy 0.55</li>
-                <img src="visualizations/spotify_dc8.PNG" alt="">
-                <img src="visualizations/spotify_dc9.PNG" alt="">
+                <img src="../static/visualizations/spotify_dc8.PNG" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/spotify_dc9.PNG" alt="" style="width:40%;display:block;">
             </ul>
             <h2>AZLyrics</h2>
             <ul>
-                <li>Feed cat</li>
-                <li>Wash car</li>
-                <li>Grocery shopping</li>
+                <li>Data Not Normalized - Take Top 30 Most Popular Genres to Improve Accuracy</li>
+                <img src="../static/visualizations/lyric_genre_normalization_graph.png" alt="" style="width:40%;display:block;">
+                <li>Multiple Models Tested for Natural Language Processing</li>
+                <img src="../static/visualizations/lyrics_ml_comparison_graph.png" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/model_accuracy_comparison.png" alt="" style="width:40%;display:block;">
+                <li>Lyrics - LinearSVC for Natural Language Processing - Accuracy 0.34</li>
+                <img src="../static/visualizations/ml_accuracy.png" alt="" style="width:40%;display:block;">
+                <img src="../static/visualizations/lyrics_ml_confusion_matrix.png" alt="" style="width:40%;display:block;">
+
             </ul>
 		<!-- </div> -->
     </div>
-    <div class = "dots"">
+    <div class = "dots">
         <!-- <h1>Round Dots / Circles</h1> -->
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
-    <div class = "row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
-            <h1>Results and Findings</h1>
-        </div>
-    </div>
-    <div class="container-fluid padding">
-		<!-- <div class="row padding"> -->
-			<div class="col-12">
-				<p class="main">
-                   Paragraph 1  
-                </p>
-            </div>
-            <h2>Spotify</h2>
-            <h2>AZLyrics</h2>
-		<!-- </div> -->
-    </div>
-    <div class = "dots"">
-        <!-- <h1>Round Dots / Circles</h1> -->
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
+
     <div class = "row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-xl-12">
             <h1>Future Improvements</h1>
@@ -306,12 +292,15 @@
 		<!-- <div class="row padding"> -->
 			<div class="col-12">
 				<p>
-                   Paragraph 1  
+                    Our models' accuracy would be greatly improved with a larger dataset with fewer categories. 
+                    We would like to try improving prediction accuracy by building a model that uses both the lyrics and audio features of the songs to predict the genre. 
+                    A few paths forward with this data are (1) Artificial Intelligence that is trained to write lyrics based on a genre
+                    and (2) Perform sentiment analysis based on more features from the Spotify API.
                 </p>
 			</div>
 		<!-- </div> -->
     </div>
-    <div class = "dots"">
+    <div class = "dots">
         <!-- <h1>Round Dots / Circles</h1> -->
         <span class="dot"></span>
         <span class="dot"></span>
@@ -333,7 +322,7 @@
             <ul class="references">
                 <li><a href="https://www.spotify.com">Spotify</li>
                 <li><a href="https://www.azlyrics.com">AZLyrics</li>
-                <li><a href="https://www.kaggle.com">Kaggle</li>
+                <li><a href="https://www.kaggle.com/albertsuarez/azlyrics">Kaggle</li>
                 <li><a href="https://pdfs.semanticscholar.org/c7f9/f7709dd30d07602c85608b1392db9ddc725a.pdf">Stanford</li>
             </ul>
 		<!-- </div> -->
