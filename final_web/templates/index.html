@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>Prediction</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../static/assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -22,18 +22,24 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="active" href="/">Home</a>
-                <a> || </a>
-                <a class="active" href="/musicsearch"> Music Search</a>
-                <a> || </a>
-                <a class="active" href="/prediction"> Prediction</a>
-                <a> || </a>
-                <a class="active" href="/audiopredict"> Quiz</a>
-                <a> || </a>
-                <a class="active" href="/summary"> Summary</a>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../templates/index.html">Home
+                </div>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+                                aria-haspopup="true" aria-expanded="false">
+                                Options
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="active" href="../templates/music_search.html"> Music Search</a>
+                                <a class="active" href="../templates/prediction.html"> Prediction</a>
+                                <a class="active" href="../templates/quiz.html"> Quiz</a>
+                                <a class="active" href="../templates/summary.html"> Summary</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Methods</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Visualizations</a></li>
@@ -70,7 +76,7 @@
                 </div>
             </div>
         </section>
-        <!-- Services-->
+        <!-- Methods and Tools-->
         <section class="page-section" id="services">
             <div class="container">
                 <h2 class="text-center mt-0">Methods and Tools</h2>
@@ -210,8 +216,8 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-3 col-sm-9">
-                        <a class="portfolio-box" href="../static/assets/img/portfolio/fullsize/k1.png">
-                            <img class="img-fluid" src="../static/assets/img/portfolio/thumbnails/k1.png" alt="" />
+                        <a class="portfolio-box" href="../static/assets/img/portfolio/fullsize/k.jpg">
+                            <img class="img-fluid" src="../static/assets/img/portfolio/thumbnails/k.jpg" alt="" />
                             <div class="portfolio-box-caption">
                                 <!-- <div class="project-category text-white-50">Category</div> -->
                                 <div class="project-name">Kay Royo</div>
@@ -255,6 +261,8 @@
                 </div>
             </div>
         </div>
+
+        <hr style="border: 1px solid #F8F8FF;" />
 
         <!-- Footer-->
         <footer class="bg-light py-5">

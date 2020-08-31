@@ -1,10 +1,10 @@
-
+// default data
 var defData = data_default; 
-
+// actual data
 var tableData = spotify_data;
 
-console.log(defData);
-console.log(tableData); 
+// console.log(defData);
+// console.log(tableData); 
 
 // *********************************
 //          DATA TABLE
@@ -33,6 +33,13 @@ function populateTable(data){
         // }
         // i++;
        
+    });
+    // turns each cell clickable each time the table is populated 
+    $('#music-table').ready(function () {
+        $("td").click(function (event) {  
+            // event.preventDefault(); 
+            window.open($(this).text(), "PopupWindow", "width=600,height=600,scrollbars=yes,resizable=yes");
+        });
     });
 };  
 
@@ -107,23 +114,3 @@ resetButton.on("click", () => {
     console.log("Table reset.")
 });
 
-
-// jQuery to convert links to clickable links 
-// $('#music-table').DataTable({
-//     "data": defData,
-//     "columns": [
-//        { "data": "artist_name",
-//        "data": "track_name",
-//        "data": "genre_name" }, 
-//        { 
-//           "data": "artist_href",
-//           "render": function(data, type, row, meta){
-//              if(type === 'hoverTable'){
-//                  data = '<a href="' + data + '">' + data + '</a>';
-//              }
-             
-//              return data;
-//           }
-//        } 
-//     ]
-//  });

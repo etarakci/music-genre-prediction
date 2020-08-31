@@ -8,82 +8,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/summary_style.css">
+  <link rel="stylesheet" href="../static/css/prediction_style.css">
 </head>
 
 <body>
-  <div class="wrapper">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="/">Home
-                </a>
-              </div>
+  <!-- <div class="wrapper"> -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top py-3" id="mainNav">
+      <div class="container">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Home </a>
           </div>
-        </nav>
-
-
-
-        
-        <div class="hero text-center">
-          <h1>Genre Prediction</h1>
-          <p>Let's predict a genre!</p>
+        <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        <!-- </button> -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="music_search.html">Search</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prediction.html">Prediction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="summary.html">Summary</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <div class="container-fluid">
-
-          <div class="row">
-            <div class="col-12 d-flex justify-content-center" >
-              <h1 style="color:black"> Enter Lyrics to Predict Genre</h1>
-            </div>
-          </div>
-
-          <div class="row">
-
-            <div class="col-lg-3"></div>
-
-
-            <div class="col-lg-6 d-flex justify-content-center text-center">
-              <form class="d-flex justify-content-center" action="/prediction" method="POST">
-                <!-- <input name="lyric" id="lyric-input" style="height:200px;width:30%;font-size:12pt;">  -->
-                <div>
-                  <textarea name="lyric" id="lyric-input" cols="60" rows="10"></textarea>
-                </div>
-                <div>
-                  <button class="d-flex justify-content-center"type="submit" id="lyric-submit" style="color:black" >Predict Genre</button>
-                </div>
-              </form>
-            </div>
-
-            <div class="col-lg-3"></div>
-          </div>
-
-            
-         
-    
-          <div class="row">
-            <div class="col-12 d-flex justify-content-center text-center">
-              <div id="prediction">
-                <h3 style="color:black">Prediction:</h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-12 d-flex justify-content-center text-center">
-              <div id="prediction">
-                <h1 style="color:black">{{ predictiontext }} </h1>
-              </div>
-            </div>
-          </div>
-          
-          
-          
-        </div>
+    <div class="hero-image">
+      <div class="hero-text">
+        <h1 style="font-size:50px">Genre Prediction</h1>
+        <p>Predict a song's genre using lyrics!</p>
+        <button>Try it!</button>
+      </div>
     </div>
 
-    
 
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center" >
+          <h1 style="color:black"> Enter Lyrics to Predict Genre</h1>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 d-flex justify-content-center text-center">
+          <form class="d-flex justify-content-center" action="/prediction" method="POST">
+            <!-- <input name="lyric" id="lyric-input" style="height:200px;width:30%;font-size:12pt;">  -->
+            <div>
+              <textarea name="lyric" id="lyric-input" cols="60" rows="10"></textarea>
+            </div>
+            <div>
+              <button class="d-flex justify-content-center"type="submit" id="lyric-submit" style="color:black" >Predict Genre</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-lg-3"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center text-center">
+          <div id="prediction">
+            <h3 style="color:black">Prediction:</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center text-center">
+          <div id="prediction">
+            <h1 style="color:black">{{ predictiontext }} </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  <hr style="border: 1px solid #F8F8FF;" />
+  <!-- Footer-->
+  <footer class="bg-light py-5">
+    <div class="container"><div class="small text-center text-muted">Copyright © 2020</div></div>
+  </footer>
+  <script src="../static/js/prediction.js"></script>
 </body>
 </html>

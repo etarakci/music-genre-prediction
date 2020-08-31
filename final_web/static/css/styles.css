@@ -107,6 +107,16 @@ address {
   line-height: inherit;
 }
 
+div .dropdown-menu .navbarDropdown {
+  padding-left: 0.75px;
+  text-align: left;
+  min-height: 10px;
+  background-color: lightblue; 
+  padding: 0;
+  margin: 0; 
+  font-size: 0.5rem;
+}
+
 ol,
 ul,
 dl {
@@ -428,6 +438,7 @@ hr {
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 
 small,
 .small {
@@ -1768,11 +1779,11 @@ pre code {
 }
 
 .table-hover .table-secondary:hover {
-  background-color: #c8cbcf;
+  background-color: #fbc0b0;
 }
 .table-hover .table-secondary:hover > td,
 .table-hover .table-secondary:hover > th {
-  background-color: #c8cbcf;
+  background-color: #fbc0b0;
 }
 
 .table-success,
@@ -1808,11 +1819,11 @@ pre code {
 }
 
 .table-hover .table-info:hover {
-  background-color: #abdde5;
+  background-color: #fbc0b0;
 }
 .table-hover .table-info:hover > td,
 .table-hover .table-info:hover > th {
-  background-color: #abdde5;
+  background-color: #fbc0b0;
 }
 
 .table-warning,
@@ -2932,6 +2943,7 @@ fieldset:disabled a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 0.5rem;
+  padding-bottom: 4px !important; 
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem;
@@ -4023,11 +4035,11 @@ a {
   justify-content: space-between;
 }
 .navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  display: flex;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4439,6 +4451,7 @@ a {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
+  margin-top: 1rem !important; 
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
@@ -10127,10 +10140,12 @@ header.masthead {
   padding-bottom: calc(10rem - 4.5rem);
   background: url("../assets/img/8425824b-29e3-41ef-be6c-29837779a663.jpg");
   /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%); */
+  /* height: 500px; */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+  /* position: relative; */
 }
 header.masthead h1 {
   font-size: 2.25rem;
@@ -10173,8 +10188,9 @@ header.masthead h1 {
   bottom: 0;
   text-align: center;
   opacity: 0;
-  color: #fff;
-  background: rgba(211, 201, 198, 0.9);
+  color: #ebebeb;
+  background: rgba(244, 98, 58, 0.9); 
+  /* opacity: 0.5; */
   transition: opacity 0.25s ease;
   text-align: center;
 }
@@ -10194,3 +10210,9 @@ header.masthead h1 {
 .text-white-75 {
   color: rgba(255, 255, 255, 0.75);
 }
+
+a .active {
+  padding-right: 0.75px;
+  padding-left: 0.75px;
+}
+
