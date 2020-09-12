@@ -25,21 +25,20 @@
               <!-- </button> -->
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="/musicsearch"> Music Search</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/prediction">Prediction</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/audiopredict"> Quiz</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/summary">Summary</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/musicsearch"> Music Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prediction">Prediction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/audiopredict"> Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/summary">Summary</a>
+                    </li>
               </ul>
               </div>
-
             </div>
           </nav>
           <div class="hero-image">
@@ -126,7 +125,7 @@
                 <p>
                     The data cleaning process for the spotify dataset includes: 
                 </p>
-                <ul>
+                <ul class = "list">
                     <li>Genre Selection - Spotify API Request</li>
                     <img src="../static/visualizations/spotify_dc1.PNG" alt="" style="width:40%;display:block;"> 
                     <li>Track Information - Spotify API Request</li>
@@ -138,7 +137,7 @@
                 <p>
                     The data cleaning process for the AZLyrics dataset includes: 
                 </p>
-                <ul>
+                <ul class = "list">
                     <li>Drop duplicates and NA values.</li>
                     <li>Standardize artist names to match names from Spotify dataset.</li>
                     <li>Remove songs with invalid and non-english lyrics.</li>
@@ -166,7 +165,7 @@
     <div class="container-fluid padding">
 		<!-- <div class="row padding"> -->
             <h2>Spotify</h2>
-            <ul>
+            <ul class = "list">
                 <li>Audio Features - Neural Network Deep Learning - Accuracy - 0.26</li>
                 <img src="../static/visualizations/spotify_dc4.PNG" alt="" style="width:40%;display:block;">
                 <img src="../static/visualizations/spotify_dc5.PNG" alt="" style="width:40%;display:block;">
@@ -178,7 +177,7 @@
                 <img src="../static/visualizations/spotify_dc9.PNG" alt="" style="width:40%;display:block;">
             </ul>
             <h2>AZLyrics</h2>
-            <ul>
+            <ul class = "list">
                 <li>Data Not Normalized - Take Top 30 Most Popular Genres to Improve Accuracy</li>
                 <img src="../static/visualizations/lyric_genre_normalization_graph.png" alt="" style="width:40%;display:block;">
                 <li>Multiple Models Tested for Natural Language Processing</li>
@@ -330,7 +329,7 @@
             </ul>
 		<!-- </div> -->
     </div>
-    <!-- <div class = "dots"">
+    <!-- <div class = "dots""> -->
         <!-- <h1>Round Dots / Circles</h1> -->
         <!-- <span class="dot"></span>
         <span class="dot"></span>
