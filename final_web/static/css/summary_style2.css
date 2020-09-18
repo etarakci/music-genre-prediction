@@ -497,32 +497,6 @@ nav ul li {
     margin-top: 50px;
   }
   
-  /* The styles for the parallax */
-  /* .hero {
-    position: relative;
-    height: 200px;
-    padding: 20px;
-    margin: 0;
-    background: black;
-    background-image: url("../assets/img/background_34926-201.jpg");
-    background-attachment: fixed;
-    background-position: bottom center;
-    background-size: cover;
-  } */
-  
-  /* .hero h1 {
-    margin-top: 10px;
-    font-size: 0.1rem;
-    animation: title 1.2s forwards linear;
-  }
-  
-  .hero p {
-    font-size: 2rem;
-    opacity: 0;
-    animation: subtitle 1.2s forwards linear;
-    animation-delay: 1.2s;
-  } */
-  
   /* input placeholder color changes */
   .form-control::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -563,70 +537,6 @@ nav ul li {
     background-color:  #4e5d6c;
     text-align: center;
   }
-  
-  /* tr.odd td{
-    background-color: tomato;
-  } */
-
-  /* tr.even td{
-    background-color:  #2b3e50;
-  } */
-  
-  
-  /* media queries which will only be activated at specific screen sizes */
-  /* @media (max-width: 800px) {
-    #table-area td {
-      font-size: 1em;
-    }
-  }
-  
-  @media (max-width: 500px) {
-    #table-area thead {
-      display: none;
-    }
-  
-    #table-area tr td:first-child {
-      font-size: 1.8em;
-      font-weight: bold;
-      background: #1b3146;
-    }
-  
-    #table-area tr td:last-child {
-      margin-bottom: 20px;
-    }
-  
-    #table-area tr td:last-child::after {
-      display: block;
-      width: 100%;
-      height: 1px;
-      margin-top: 20px;
-      content: " ";
-      background: aliceblue;
-    }
-  
-    #table-area td {
-      font-size: 1.25em;
-    }
-  
-    #table-area tbody td {
-      display: block;
-      text-align: center;
-    }
-  
-    #table-area tbody td::before {
-      display: block;
-      font-size: 1.4em;
-      font-weight: bold;
-      text-align: center;
-      content: attr(data-th);
-    }
-  
-    .hero-image h1 {
-      animation: smaller-title 1.2s forwards linear;
-    }
-  } */
-  
-
 
   /* Define the hover style for the links */
 .hoverTable td:hover {
@@ -643,8 +553,8 @@ nav ul li {
 display: block;
 }
 
+/* container that contains the navigation menu */
 .container {
-
   margin-left: 150px !important; 
 }
 
@@ -670,9 +580,13 @@ ul  li {
   font-size: x-large;
   /* text-align: center;  */
 }
-/* ul {
+ ul {
   list-style: none; /* Remove default bullets */
-/* } */ 
+ } 
+
+ #list {
+   align-content: center;
+ }
 
 .references li{
   list-style: none; /* Remove default bullets */
@@ -687,17 +601,23 @@ ul  li {
   color: teal;
 }
 
-ul li::before {
+/* ul li::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: teal; /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
+  /* color: teal; Change the color */
+  /* font-weight: bold; If you want it to be bold */
+  /* display: inline-block; Needed to add space between the bullet and the text */
+  /* width: 1em; Also needed for space (tweak if needed) */
+  /* margin-left: -1em; Also needed for space (tweak if needed) */
+/* } */ 
 
-img {
+ul img {
   position: relative;
+  /* display: flex; */
+  align-items: center;
+  /* text-align:center !important; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
   /* width: 1000px; */
   /* height: 500px;  */
 
@@ -745,6 +665,8 @@ color: teal;
 
 #portfolio .container, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl {
 max-width: 1920px;
+align-items: center;
+position: relative;
 }
 #portfolio .container .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box {
 position: relative;
@@ -773,6 +695,10 @@ text-align: center;
 margin-top: 10px;
 margin-bottom: 10px; 
 }
+/* #portfolio{
+  margin-left: auto;
+  margin-right: auto;
+} */
 #portfolio .container .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category {
 font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 font-size: 0.85rem;
