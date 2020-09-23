@@ -13,16 +13,16 @@ pp = pprint.PrettyPrinter(indent=4)
 app = Flask(__name__)
 
 # HEROKU
-# lyric_model = pickle.load(open('final_web/static/models/top30_genre_model.pickle', 'rb'))
-# loaded_tfidf= pickle.load(open("final_web/static/models/vectorizer.pickle", "rb"))
-# genre_dict = pickle.load(open("final_web/static/models/genre_dict.csv", "rb"))
-# audio_features_model = pickle.load(open("final_web/static/models/audio_features_model.csv", "rb"))
+lyric_model = pickle.load(open('final_web/static/models/top30_genre_model.pickle', 'rb'))
+loaded_tfidf= pickle.load(open("final_web/static/models/vectorizer.pickle", "rb"))
+genre_dict = pickle.load(open("final_web/static/models/genre_dict.csv", "rb"))
+audio_features_model = pickle.load(open("final_web/static/models/audio_features_model.csv", "rb"))
 
 # FLASK/LOCAL
-lyric_model = pickle.load(open('static/models/top30_genre_model.pickle', 'rb'))
-loaded_tfidf= pickle.load(open("static/models/vectorizer.pickle", "rb"))
-genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
-audio_features_model = pickle.load(open("static/models/audio_features_model.csv", "rb"))
+# lyric_model = pickle.load(open('static/models/top30_genre_model.pickle', 'rb'))
+# loaded_tfidf= pickle.load(open("static/models/vectorizer.pickle", "rb"))
+# genre_dict = pickle.load(open("static/models/genre_dict.csv", "rb"))
+# audio_features_model = pickle.load(open("static/models/audio_features_model.csv", "rb"))
 
 import re
 
@@ -94,14 +94,31 @@ def genrepredict():
     return render_template('prediction.html')
 
 
+# @app.route("/audiopredict", methods=['GET','POST'])
+# def audiopredict():
+#     if request.method=='POST':
+#         array = request.form.get("inputArray")
+
+#         genre_prediction = audio_features_model(array)
+
+#     return render_template('quiz_predict.html')
+
 @app.route("/audiopredict", methods=['GET','POST'])
 def audiopredict():
+    print("I made it")
     if request.method=='POST':
-        array = request.form.get("inputArray")
-
-        genre_prediction = audio_features_model(array)
-
+        array = request.form.get("audio")
+        array = array.split(",")
+        print(array)
+        input = []
+        for number in array:
+            input.append(float(number))
+        input = [input]
+        genre_prediction = audio_features_model.predict(input)[0]
+        print(genre_prediction)
+        return render_template('quiz_predict.html', genreprediction=genre_prediction, hi="Hello")
     return render_template('quiz_predict.html')
+
 
 
 if __name__ == "__main__":

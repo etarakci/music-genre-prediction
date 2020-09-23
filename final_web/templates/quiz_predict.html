@@ -36,19 +36,40 @@
     </nav>
     <div class="hero-image">
       <div class="hero-text">
-        <h1 style="font-size:50px">Quiz</h1>
+        <h1 style="font-size:50px">Quiz: Coming Soon</h1>
         <p>Let's take a quiz!</p>
-        <button>Try it!</button>
       </div>
     </div>
+
+    <div class="predict-container">
+      <h1 style="font-size:30px;color:black" display="block">Test the Model:</h1>
+      <p>Click the button to display your preferred genre!</p>
+      <form action="/audiopredict" method="POST">
+        <input name="audio" id="demo">
+        <button type="submit" id="genre-submit" style="padding:5px;">Submit</button>
+      </form>
+      <h1 style="font-size:24px;color:black">Predicted Genre: {{ genreprediction }} </h1>
+    </div>
+
+    <div class = "dots">
+      <!-- <h1>Round Dots / Circles</h1> -->
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+  </div>
+
+    <h1 style="font-size:30px;color:black" display="block">Example Quiz Questions:</h1>
     <div class="quiz-container">
-        <div id="quiz"></div>
-      </div>
-      <button id="previous">Previous Question</button>
-      <button id="next">Next Question</button>
-      <button id="submit">Submit Quiz</button>
-      <!-- <div id="results"></div> -->
+      <div id="quiz"></div>
     </div>
+    <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
+    <button id="submit">Submit Quiz</button>
+    <!-- <div id="results"></div> -->
+    </div>
+
+
     <hr style="border: 1px solid #F8F8FF;" />
     <!-- Footer-->
     <footer class="bg-light py-5">

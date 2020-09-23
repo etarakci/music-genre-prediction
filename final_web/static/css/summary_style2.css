@@ -253,7 +253,7 @@
   font-size: 1rem;
   line-height: inherit;
   white-space: nowrap;
-  padding-right: 500px; 
+  padding-right: 400px; 
   /* text-align:left; */
 }
 
@@ -575,7 +575,7 @@ display: block;
 ul  li {
   color:black; 
   font-size: large;
-  padding: 30px; 
+  padding: 9.5px; 
   padding-left: 30px;
   font-size: x-large;
   /* text-align: center;  */
