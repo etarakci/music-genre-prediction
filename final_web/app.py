@@ -13,8 +13,8 @@ pp = pprint.PrettyPrinter(indent=4)
 app = Flask(__name__)
 
 # HEROKU
-lyric_model = pickle.load(open('final_web/static/models/top30_genre_model.pickle', 'rb'))
-loaded_tfidf= pickle.load(open("final_web/static/models/vectorizer.pickle", "rb"))
+lyric_model = pickle.load(open('final_web/static/models/top30_genre_model_with_sw.pickle', 'rb'))
+loaded_tfidf= pickle.load(open("final_web/static/models/vectorizer_with_sw.pickle", "rb"))
 genre_dict = pickle.load(open("final_web/static/models/genre_dict.csv", "rb"))
 audio_features_model = pickle.load(open("final_web/static/models/audio_features_model.csv", "rb"))
 
