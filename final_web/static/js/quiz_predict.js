@@ -9,7 +9,7 @@ const submitButton = document.getElementById('submit');
 
 const myQuestions = [
     {
-      question: "What is your preferred duration for music?",
+      question: "Music Duration",
       answers: {
         a: 10000,
         b: 100000,
@@ -18,7 +18,7 @@ const myQuestions = [
       correctAnswer: "c"
     },
     {
-      question: "What's your musical pitch preference? <br> Major (1) - brighter, cheerier, energetic <br> Minor (2) - chill, mellow, gloomy",
+      question: "Musical Pitch: <br> Major (1) - brighter, cheerier, energetic <br> Minor (2) - chill, mellow, gloomy",
       answers: {
         a: 1,
         b: 0,
@@ -26,7 +26,7 @@ const myQuestions = [
       correctAnswer: "a"
     },
     {
-        question: "Where do you prefer to sit when you go to a musical performance, etc.? <br> Front (1) Middle (0.5) Back (0)",
+        question: "Preferred Location in the Audience: <br> Front (1) Middle (0.5) Back (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -35,7 +35,7 @@ const myQuestions = [
         correctAnswer: "c"
     },
     {
-        question: "Do you feel like dancing? <br> Yes (1) Maybe (0.5) No (0)",
+        question: "Danceability: <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -44,7 +44,7 @@ const myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "Do you need some energy? <br> Yes (1) Maybe (0.5) No (0)",
+        question: "Energetic: <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -53,7 +53,7 @@ const myQuestions = [
         correctAnswer: "a"
     },
     {
-        question: "Do you like vocals in your music? <br> Yes (1) Maybe (0.5) No (0)",
+        question: "Vocals in Music: <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -62,7 +62,7 @@ const myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "Do you like live music? <br> Yes (1) Maybe (0.5) No (0)",
+        question: "Live Music: <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -71,7 +71,7 @@ const myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "How loud do you like your music? <br> Measured: Decibals(dB) ",
+        question: "Loudness <br> Measured: Decibals(dB) ",
         answers: {
           a: 0,
           b: -30,
@@ -80,7 +80,7 @@ const myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "Do you like spoken word in your music? <br> Yes (1) Maybe (0.5) No (0)",
+        question: "Spoken Word in Music: <br> Yes (1) Maybe (0.5) No (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -89,7 +89,7 @@ const myQuestions = [
         correctAnswer: "b"
     }, 
     {
-        question: "How are you feeling? <br> Cheery, Energetic (1) Chill, Mellow (0.5) Down, Gloomy (0)",
+        question: "Mood: <br> Cheery, Energetic (1) Chill, Mellow (0.5) Down, Gloomy (0)",
         answers: {
           a: 1,
           b: 0.5,
@@ -98,7 +98,7 @@ const myQuestions = [
         correctAnswer: "b"
     },    
     {
-      question: "Do you like beats in your music? <br> Measuredx: beats per minute",
+      question: "Beats <br> Measured: beats per minute",
       answers: {
         a: 0,
         b: 100,
