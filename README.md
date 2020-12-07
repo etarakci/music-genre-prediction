@@ -1,5 +1,5 @@
 # Song Genre Prediction Using NLP and Audio Features
-Check out the fully deployed project on our [website.](https://genre-prediction-team5.herokuapp.com/)
+Check out the fully deployed project on our [website.](https://music-genre-prediction.herokuapp.com/)
 You can also find a more thorough walk-through of our process on our [summary page.](https://music-genre-prediction.herokuapp.com/summary)
 
 ## Team Members
